@@ -28,6 +28,28 @@ const Head = props => (
     <meta property="og:image" content={props.ogImage || defaultOGImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+
+      <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-analytics.js"></script>
+
+      <script>
+          // Your web app's Firebase configuration
+          var firebaseConfig = {
+          apiKey: "AIzaSyC6LndIMCZK_0nhX5mYV_fX-EFRJXOm2Ag",
+          authDomain: "finances-738aa.firebaseapp.com",
+          databaseURL: "https://finances-738aa.firebaseio.com",
+          projectId: "finances-738aa",
+          storageBucket: "finances-738aa.appspot.com",
+          messagingSenderId: "698486215131",
+          appId: "1:698486215131:web:93dd76d279e4101dda57fe",
+          measurementId: "G-Y16YRGPNDD"
+      };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          firebase.analytics();
+      </script>
   </NextHead>
 );
 
